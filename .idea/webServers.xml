@@ -2,8 +2,16 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="7c9b8559-6942-4b86-8f7f-abbc66408c16" name="192.168.1.183" url="http://192.168.1.183">
-        <fileTransfer host="192.168.1.183" port="22" rootFolder="/swoole" accessType="SFTP">
+      <webServer id="7c9b8559-6942-4b86-8f7f-abbc66408c16" name="192.168.1.184" url="http://192.168.1.184">
+        <fileTransfer host="192.168.1.184" port="22" rootFolder="/swoole" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="9ad0b083-094e-4b46-a45e-beda52df424b" name="192.168.1.159" url="http://192.168.1.159">
+        <fileTransfer host="192.168.1.159" port="22" rootFolder="/swoole" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

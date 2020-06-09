@@ -15,7 +15,7 @@ return [
             'daemonize'             => false,
             // Normally this value should be 1~4 times larger according to your cpu cores.
             'reactor_num'           => swoole_cpu_num(),
-            'worker_num'            => swoole_cpu_num(),
+            'worker_num'            => 1,
             'task_worker_num'       => swoole_cpu_num(),
             'enable_static_handler' => true,
             'document_root'         => root_path('public'),
@@ -25,7 +25,7 @@ return [
         ],
     ],
     'websocket'  => [
-        'enable'        => false,
+        'enable'        => true,
         'handler'       => Handler::class,
         'parser'        => Parser::class,
         'ping_interval' => 25000,
@@ -81,6 +81,7 @@ return [
     ],
     'coroutine'  => [
         'enable' => true,
+//        'enable' => false,
         'flags'  => SWOOLE_HOOK_ALL,
     ],
     'tables'     => [],

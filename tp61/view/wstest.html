@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ws = new WebSocket('192.168.1.184');
+
+    ws.onopen = function () {
+        console.log('连接成功')
+    }
+    
+    ws.onmessage = function (res) {
+        console.log(res.data)
+    }
+
+    ws.onclose = function () {
+        console.log('连接关闭')
+    }
+</script>
+</body>
+</html>

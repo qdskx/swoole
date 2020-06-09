@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/tp61/vendor/open-smf/connection-pool" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/think-trace" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/think-swoole" />
+      <path value="$PROJECT_DIR$/tp61/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/framework" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/think-orm" />
+      <path value="$PROJECT_DIR$/tp61/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/tp61/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/tp61/vendor/swoole/ide-helper" />
+      <path value="$PROJECT_DIR$/tp61/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/tp61/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/tp61/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/tp61/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/tp61/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/tp61/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/tp61/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/tp61/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/tp61/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/tp61/vendor/composer" />
+      <path value="$PROJECT_DIR$/tp61/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/think-template" />
+      <path value="$PROJECT_DIR$/tp61/vendor/topthink/think-view" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+</project>
