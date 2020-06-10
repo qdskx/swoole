@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    var ws = new WebSocket('192.168.1.184');
+    var ws = new WebSocket('ws://192.168.1.184:8080');
 
     ws.onopen = function () {
         console.log('连接成功')

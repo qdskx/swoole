@@ -11,12 +11,12 @@ class Index extends BaseController
         sleep(5);
         $end = time();
 
-        return getmypid() . "---- start:{$start} --- end:{$end}";
+        return getmypid() . "咋咋---- start:{$start} --- end:{$end}";
     }
 
     public function hello($name = 'ThinkPHP6')
     {
-        echo '5555555555';
+        echo '111111';
         return 'hello,' . $name;
     }
 }

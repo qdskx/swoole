@@ -15,7 +15,7 @@ return [
             'daemonize'             => false,
             // Normally this value should be 1~4 times larger according to your cpu cores.
             'reactor_num'           => swoole_cpu_num(),
-            'worker_num'            => 1,
+            'worker_num'            => 2,
             'task_worker_num'       => swoole_cpu_num(),
             'enable_static_handler' => true,
             'document_root'         => root_path('public'),
@@ -80,8 +80,8 @@ return [
         //自定义连接池
     ],
     'coroutine'  => [
-        'enable' => true,
-//        'enable' => false,
+//        'enable' => true,
+        'enable' => false,
         'flags'  => SWOOLE_HOOK_ALL,
     ],
     'tables'     => [],
