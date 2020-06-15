@@ -24,6 +24,7 @@
         // console.log('onmessage什么数据');
         // console.log(res)
         console.log(res.data)
+        dealData(res.data)
     }
 
 
@@ -43,6 +44,50 @@
                 mess:mess,
             }
         ]));
+    }
+    
+    function dealData(data) {
+        // 42["testcallback",{"from":{"id":45,"fd":4,"nickname":"\u6765\u81ea\u54ea"},"to":{"id":56,"fd":"3","nickname":"\u7ed9\u8c01\u53d1\u9001"},"mess":{"id":"\u6570\u636e\u5e93\u67e5\u8be2\u7684id","create_time":20200612,"content":"3"}}]
+        // 0{"sid":"NWVlNmRkMDdhZjc0Nw==","upgrades":[],"pingInterval":25000,"pingTimeout":60000}
+        var start = data.indexOf('[');
+        var elseStart = data.indexOf('{');
+
+        if(start < 0){
+            start = elseStart;
+        }
+
+        if(start >= 0 && elseStart >= 0 ){
+            start = Math.min(start , elseStart);
+
+        }
+
+        if(start >= 0 ){
+            var res = data.substr(start);
+            var json = JSON.parse(res)
+            console.log(json)
+            if(json instanceof Array){
+                window[json[0]](json[1])
+            }
+        }
+
+    }
+
+    // 事件Test
+    function testcallback(data) {
+
+        console.log('回调函数传来的')
+        console.log(data)
+    }
+
+    // 连接事件
+    function send_fd(data) {
+        console.log('链接得到的参数')
+        console.log(data)
+    }
+
+    // 其他事件
+    function testcallback1() {
+        
     }
 </script>
 </body>

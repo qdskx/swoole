@@ -13,6 +13,7 @@ class WsClose
     public function handle($event , \think\swoole\Websocket $ws)
     {
         var_dump('close');
-        var_dump($event);
+
+        var_dump($event);//空的
     }    
 }
