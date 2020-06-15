@@ -5,7 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+
+<br />
+发送的消息：<input type="text" name="mess" value="" id="mess"><br />
+发送给谁：<input type="text" name="to" value="" id="to"><br />
+<button onclick="send()">请求</button>
+
+
 <script>
+    //http https ws wss
     var ws = new WebSocket('ws://192.168.1.184:8080');
 
     ws.onopen = function () {
@@ -13,11 +21,28 @@
     }
     
     ws.onmessage = function (res) {
+        // console.log('onmessage什么数据');
+        // console.log(res)
         console.log(res.data)
     }
 
+
     ws.onclose = function () {
         console.log('连接关闭')
+    }
+    
+    function send() {
+        var mess = document.getElementById('mess').value;
+        var to = document.getElementById('to').value;
+
+        console.log('我要发送数据了 给' + to + ' 内容是 ' + mess);
+        // ws.send(mess);
+        ws.send(JSON.stringify([
+            'test',{
+                to : to,
+                mess:mess,
+            }
+        ]));
     }
 </script>
 </body>

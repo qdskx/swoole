@@ -10,8 +10,9 @@ class WsClose
      *
      * @return mixed
      */
-    public function handle($event)
+    public function handle($event , \think\swoole\Websocket $ws)
     {
-        //
+        var_dump('close');
+        var_dump($event);
     }    
 }
