@@ -2,6 +2,7 @@
 declare (strict_types = 1);
 
 namespace app\listener;
+use app\controller\util\RedisUtil;
 
 class WsClose
 {
@@ -15,5 +16,6 @@ class WsClose
         var_dump('close');
 
         var_dump($event);//空的
+//        RedisUtil::hdelRedis();
     }    
 }

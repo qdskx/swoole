@@ -10,7 +10,7 @@ class WsTest
      *
      * @return mixed
      */
-    public function handle($event)
+    public function handleDe($event)
     {
         var_dump('test');
         var_dump($event);
@@ -49,5 +49,9 @@ class WsTest
 //        $ws->emit('testcallback' , '自己发给自己');
 
 //        var_dump(get_class(app('think\swoole\Manager')->getServer()));
+    }
+
+    public function handle($event , \think\swoole\Websocket $ws){
+        $ws->to($event['to'])->emit('testcallback' , $event['mess']);
     }
 }

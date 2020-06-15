@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自己写一个小chat</title>
+</head>
+<body>
+发送的消息：<input type="text" name="mess" value="" id="mess"><br />
+发送给谁：<input type="text" name="to" value="" id="to"><br />
+<button onclick="send()">请求</button>
+
+
+<script src="https://cdn.socket.io/socket.io-1.4.4.js"></script>
+
+<script>
+    var socket = io('http://192.168.1.184:8080' , {'transports' : ['websocket']});
+
+    socket.on('connect' , function () {
+        console.log('连接成功')
+    })
+
+    socket.on('send_fd' , function (data) {
+        console.log('send_fd' , data)
+    })
+
+    socket.on('testcallback' , function (data) {
+        console.log('testcallback' , data)
+    })
+
+    socket.on('close' , function () {
+        console.log('链接关闭')
+    })
+
+    function send() {
+        var mess = document.getElementById('mess').value;
+        var to = document.getElementById('to').value;
+
+        console.log('我要发送数据了 给' + to + ' 内容是 ' + mess);
+        socket.emit('test' , {
+            to : to,
+            mess : mess
+        })
+    }
+</script>
+</body>
+</html>
