@@ -52,6 +52,6 @@ class WsTest
     }
 
     public function handle($event , \think\swoole\Websocket $ws){
-        $ws->to($event['to'])->emit('testcallback' , $event['mess']);
+        $ws->to()->emit('testcallback' , $event['mess']);
     }
 }

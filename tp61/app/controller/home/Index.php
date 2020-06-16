@@ -11,7 +11,11 @@ class Index extends BaseController{
         return View::fetch('/wstest');
     }
 
-    public function index(){
+    public function index_middle(){
         return View::fetch('/index');
+    }
+
+    public function index(){
+        return View::fetch('/roomDanmu');
     }
 }

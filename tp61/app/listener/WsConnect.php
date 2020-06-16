@@ -2,7 +2,7 @@
 declare (strict_types = 1);
 
 namespace app\listener;
-use app\controller\util\RedisUtil;
+//use app\controller\util\RedisUtil;
 
 class WsConnect
 {
@@ -16,8 +16,8 @@ class WsConnect
         var_dump('connect');
 
 
-        $uid = $event->get('id');
-        RedisUtil::hsetRedis('0' , 'uidFd' , $uid , $ws->getSender());
+//        $uid = $event->get('id');
+//        RedisUtil::hsetRedis('0' , 'uidFd' , $uid , $ws->getSender());
 //        var_dump($event);
 //        var_dump($ws->getsender());
         $ws->emit('send_fd' , $ws->getSender());

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹幕模拟</title>
+</head>
+<body>
+<button onclick="join()">加入房间</button>
+<button onclick="leave()">离开房间</button><br />
+<input type="text" id="mess">
+<button onclick="send()">发送</button>
+
+<script>
+    var ws = new WebSocket('ws://192.168.1.184:8080');
+    ws.onopen = function () {
+        console.log('连接成功')
+    }
+
+    ws.onmessage = function (res) {
+        console.log('连接后接收到的数据')
+        console.log(res.data)
+        // dealData(res.data)
+    }
+
+
+    ws.onclose = function () {
+        console.log('连接关闭')
+    }
+
+    function send() {
+        var mess = document.getElementById('mess').value;
+
+        var room = prompt('你要对那个房间喊话？')
+
+        console.log('我要发送数据了 内容是 ' + mess);
+        ws.send(JSON.stringify([
+            'roomTest',{
+                mess:mess,
+                room:room,
+            }
+        ]));
+
+        // Roomtest跟事件名一模一样肯定行
+        // roomTest也行
+        // roomtest就是不行
+    }
+
+    function dealData(data) {
+
+        var start = data.indexOf('[');
+        var elseStart = data.indexOf('{');
+
+        if(start < 0){
+            start = elseStart;
+        }
+
+        if(start >= 0 && elseStart >= 0 ){
+            start = Math.min(start , elseStart);
+
+        }
+
+        if(start >= 0 ){
+            var res = data.substr(start);
+            var json = JSON.parse(res)
+            console.log('json' , json)
+            if(json instanceof Array){
+                window[json[0]](json[1])
+            }
+        }
+
+    }
+
+
+    // 连接事件
+    function send_fd(data) {
+        console.log('连接send_fd得到的参数')
+        console.log(data)
+    }
+
+    // 加入房间
+    function join() {
+        var room = prompt('请输入要加入的房间号：')
+        ws.send(JSON.stringify([
+            'join' ,{
+            room : room
+            }
+        ]))
+    }
+
+    // 离开房间
+    function leave() {
+        var room = prompt('请输入要离开的房间号：')
+        ws.send(JSON.stringify([
+            'leave' , {
+            room : room
+            }
+        ]))
+    }
+    
+    function joincallback(data) {
+        console.log('joincallback' , data)
+    }
+    
+    function leavecallback(data) {
+        console.log('leavecallback' , data)
+    }
+    
+    function roomtestcallback(data) {
+        console.log('roomtestcallback' , data)
+    }
+</script>
+</body>
+</html>

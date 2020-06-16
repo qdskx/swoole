@@ -2,7 +2,7 @@
 declare (strict_types = 1);
 
 namespace app\listener;
-use app\controller\util\RedisUtil;
+//use app\controller\util\RedisUtil;
 
 class WsClose
 {
