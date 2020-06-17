@@ -46,7 +46,9 @@ return [
             ],
         ],
         'listen'        => [],
-        'subscribe'     => [],
+        'subscribe'     => [
+            \app\listener\SubTest::class,
+        ],
     ],
     'rpc'        => [
         'server' => [

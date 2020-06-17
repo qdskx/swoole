@@ -32,9 +32,12 @@ class RoomJoin
 //        $rooms = $room->getRooms($ws->getSender());
 //        var_dump($rooms);
 
-//        回复给客户端的消息
-        $ws->emit('joincallback' , $ws->getSender() . '成功加入房间' . $event['room']);
+//        回复给当前客户端的消息
+//        $ws->emit('joincallback' , $ws->getSender() . '成功加入房间' . $event['room']);
 
+//        告诉房间某人加入的消息
+//        joincallback    相当于给客户端发消息
+        $ws->to($event['room'])->emit('joincallback' , $ws->getSender() . '加入房间');
 
 //        指定客户端接入某个指定房间
 //        $ws->setSender(3)->join($event['room']);

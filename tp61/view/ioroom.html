@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用socket.io实现房间</title>
+</head>
+<body>
+
+
+
+
+
+<button onclick="join()">加入房间</button>
+<button onclick="leave()">离开房间</button><br />
+<input type="text" id="mess">
+<button onclick="send()">发送</button>
+
+
+<script src="https://cdn.socket.io/socket.io-1.4.4.js"></script>
+
+<script>
+    var socket = io('http://192.168.1.184:8080' , {'transports' : ['websocket']});
+
+    socket.on('connect' , function () {
+        console.log('连接成功')
+    })
+
+    socket.on('send_fd' , function (data) {
+        console.log('send_fd' , data)
+    })
+
+    socket.on('roomtestcallback' , function (data) {
+        console.log('roomtestcallback' , data)
+    })
+
+    socket.on('joincallback' , function (data) {
+        console.log('joincallback' , data)
+    })
+
+    socket.on('leavecallback' , function (data) {
+        console.log('leavecallback' , data)
+    })
+
+    socket.on('close' , function () {
+        console.log('链接关闭')
+    })
+
+    function send() {
+        var mess = document.getElementById('mess').value;
+        var room = prompt('你要准备向那个房间喊话：')
+
+        console.log('即将发送内容为 ' + mess + ' 给房间 ' + room);
+        socket.emit('roomTest' , {
+            room : room,
+            mess : mess
+        })
+    }
+    
+    function join() {
+        var room = prompt('你要加入哪个房间？')
+        socket.emit('join' , {
+            room : room 
+        })
+    }
+    
+    function leave() {
+        var room = prompt('你要离开哪个房间？')
+        socket.emit('leave' , {
+            room : room
+        })
+    }
+</script>
+
+</body>
+</html>
