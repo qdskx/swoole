@@ -10,6 +10,9 @@ return [
         'HttpEnd'  => [],
         'LogLevel' => [],
         'LogWrite' => [],
+        'swoole.task' => [
+            \app\listener\EmailTask::class,
+        ],
 //        'swoole.websocket.Connect' => [     //注意注意,这的Connnect首字母必须必须大写！！！！！！
 //            \app\listener\WsConnect::class
 //        ],
