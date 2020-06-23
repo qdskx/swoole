@@ -7,11 +7,13 @@ class Index extends BaseController
 {
     public function index()
     {
-        $start = time();
-        sleep(5);
-        $end = time();
+//        $start = time();
+//        sleep(5);
+//        $end = time();
+//
+//        return getmypid() . "咋咋---- start:{$start} --- end:{$end}";
 
-        return getmypid() . "咋咋---- start:{$start} --- end:{$end}";
+        return 'tp61index';
     }
 
     public function hello($name = 'ThinkPHP6')

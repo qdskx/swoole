@@ -515,8 +515,8 @@ class App extends Container
             $this->loadEvent(include $appPath . 'event.php');
         }
 
-        if (is_file($appPath . 'service.php')) {
-            $services = include $appPath . 'service.php';
+        if (is_file($appPath . 'services.php')) {
+            $services = include $appPath . 'services.php';
             foreach ($services as $service) {
                 $this->register($service);
             }

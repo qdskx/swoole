@@ -20,7 +20,7 @@ class ServiceDiscover extends Command
 {
     public function configure()
     {
-        $this->setName('service:discover')
+        $this->setName('services:discover')
             ->setDescription('Discover Services for ThinkPHP');
     }
 

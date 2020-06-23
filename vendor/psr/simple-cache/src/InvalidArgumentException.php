@@ -3,10 +3,10 @@
 namespace Psr\SimpleCache;
 
 /**
- * Exception interface for invalid cache arguments.
+ * Exception interfaces for invalid cache arguments.
  *
  * When an invalid argument is passed it must throw an exception which implements
- * this interface
+ * this interfaces
  */
 interface InvalidArgumentException extends CacheException
 {

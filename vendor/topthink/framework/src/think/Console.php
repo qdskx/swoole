@@ -70,14 +70,14 @@ class Console
         'make:validate'    => Validate::class,
         'make:event'       => Event::class,
         'make:listener'    => Listener::class,
-        'make:service'     => Service::class,
+        'make:services'     => Service::class,
         'make:subscribe'   => Subscribe::class,
         'optimize:route'   => Route::class,
         'optimize:schema'  => Schema::class,
         'run'              => RunServer::class,
         'version'          => Version::class,
         'route:list'       => RouteList::class,
-        'service:discover' => ServiceDiscover::class,
+        'services:discover' => ServiceDiscover::class,
         'vendor:publish'   => VendorPublish::class,
     ];
 

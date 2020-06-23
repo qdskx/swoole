@@ -20,7 +20,7 @@ class Service extends Make
     protected function configure()
     {
         parent::configure();
-        $this->setName('make:service')
+        $this->setName('make:services')
             ->setDescription('Create a new Service class');
     }
 
@@ -31,6 +31,6 @@ class Service extends Make
 
     protected function getNamespace(string $app): string
     {
-        return parent::getNamespace($app) . '\\service';
+        return parent::getNamespace($app) . '\\services';
     }
 }

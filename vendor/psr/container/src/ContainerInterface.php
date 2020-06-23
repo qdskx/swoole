@@ -6,7 +6,7 @@
 namespace Psr\Container;
 
 /**
- * Describes the interface of a container that exposes methods to read its entries.
+ * Describes the interfaces of a container that exposes methods to read its entries.
  */
 interface ContainerInterface
 {

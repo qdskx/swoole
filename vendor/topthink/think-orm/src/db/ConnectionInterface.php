@@ -16,7 +16,7 @@ use Psr\SimpleCache\CacheInterface;
 use think\DbManager;
 
 /**
- * Connection interface
+ * Connection interfaces
  */
 interface ConnectionInterface
 {

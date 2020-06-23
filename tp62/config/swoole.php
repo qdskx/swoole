@@ -6,7 +6,7 @@ use think\swoole\websocket\socketio\Parser;
 return [
     'server'     => [
         'host'      => env('SWOOLE_HOST', '0.0.0.0.'), // 监听地址
-        'port'      => env('SWOOLE_PORT', 8080), // 监听端口
+        'port'      => env('SWOOLE_PORT', 8081), // 监听端口
         'mode'      => SWOOLE_PROCESS, // 运行模式 默认为SWOOLE_PROCESS
         'sock_type' => SWOOLE_SOCK_TCP, // sock type 默认为SWOOLE_SOCK_TCP
         'options'   => [
@@ -49,13 +49,14 @@ return [
         'subscribe'     => [],
     ],
     'rpc'        => [
-        'server' => [
-            'enable'   => false,
-            'port'     => 9000,
-            'services' => [
-            ],
-        ],
+
         'client' => [
+//            tp61 自定义的服务端标识
+            'tp61' => [
+                'host' => '127.0.0.1',
+//                'host' => '0.0.0.0',
+                'port' => 9000,
+            ]
         ],
     ],
     'hot_update' => [

@@ -850,7 +850,7 @@ class ReflectionClosure extends ReflectionFunction
                             $startLine = $token[2];
                             $structType = $token[0] == T_CLASS
                                                     ? 'class'
-                                                    : ($token[0] == T_INTERFACE ? 'interface' : 'trait');
+                                                    : ($token[0] == T_INTERFACE ? 'interfaces' : 'trait');
                             break;
                         case T_USE:
                             $state = 'use';

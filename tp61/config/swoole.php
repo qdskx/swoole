@@ -25,7 +25,7 @@ return [
         ],
     ],
     'websocket'  => [
-        'enable'        => true,
+        'enable'        => false,
         'handler'       => Handler::class,
         'parser'        => Parser::class,
         'ping_interval' => 25000,
@@ -52,12 +52,15 @@ return [
     ],
     'rpc'        => [
         'server' => [
-            'enable'   => false,
+            'enable'   => true,
             'port'     => 9000,
             'services' => [
+                \app\rpc\services\ArticleService::class,
+                \app\rpc\services\UserService::class,
             ],
         ],
         'client' => [
+
         ],
     ],
     'hot_update' => [
