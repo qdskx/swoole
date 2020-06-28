@@ -1,14 +1,20 @@
 <?php
 namespace app\rpc\services;
+
+
 use app\rpc\interfaces\ArticleInterface;
+
 
 class ArticleService implements ArticleInterface
 {
-    public function add($title){
-        return '发布' . $title;
+    public function create()
+    {
+        return 'create article';
     }
 
-    public function list(){
+    public function delete(int $id)
+    {
+        return 'delete:' . $id;
 
     }
 }

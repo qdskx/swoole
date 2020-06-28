@@ -56,7 +56,7 @@ return [
             'port'     => 9000,
             'services' => [
                 \app\rpc\services\ArticleService::class,
-                \app\rpc\services\UserService::class,
+                \app\rpc\services\ProductService::class
             ],
         ],
         'client' => [
@@ -89,7 +89,40 @@ return [
         'enable' => false,
         'flags'  => SWOOLE_HOOK_ALL,
     ],
-    'tables'     => [],
+    'tables'     => [
+        'user' => [
+            'size' => 1024,
+            'columns' => [
+                [
+                    'name' => 'id',
+                    'type' => \Swoole\Table::TYPE_INT
+                ],
+                [
+                    'name' => 'name',
+                    'type' => \Swoole\Table::TYPE_STRING,
+                    'size' => 20
+                ],
+                [
+                    'name' => 'pwd',
+                    'type' => \Swoole\Table::TYPE_FLOAT
+                ]
+            ]
+        ],
+
+        'order' => [
+            'size' => 1024,
+            'columns' => [
+                [
+                    'name' => 'id',
+                    'type' => \Swoole\Table::TYPE_INT
+                ],
+                [
+                    'name' => 'uid',
+                    'type' => Swoole\Table::TYPE_INT
+                ]
+            ]
+        ],
+    ],
     //每个worker里需要预加载以共用的实例
     'concretes'  => [],
     //重置器

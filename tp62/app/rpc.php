@@ -8,19 +8,19 @@ declare(strict_types=1);
 
 namespace rpc\contract\tp61;
 
-interfaces ArticleInterface
+interface ArticleInterface
 {
-	public function add($title);
+	public function create();
 
 
-	public function list();
+	public function delete(int $id);
 }
 
-interfaces UserInterface
+interface ProductInterface
 {
-	public function money($money);
+	public function getList();
 
 
-	public function getInfo($name);
+	public function getDetail(int $id);
 }
-return ['tp61' => ['rpc\contract\tp61\ArticleInterface', 'rpc\contract\tp61\UserInterface']];
+return ['tp61' => ['rpc\contract\tp61\ArticleInterface', 'rpc\contract\tp61\ProductInterface']];

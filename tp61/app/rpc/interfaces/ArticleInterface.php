@@ -1,10 +1,10 @@
 <?php
 namespace app\rpc\interfaces;
 
-interface ArticleInterface{
+interface ArticleInterface
+{
 
-    public function add($title);
+    public function create();
 
-    public function list();
-
+    public function delete(int $id);
 }

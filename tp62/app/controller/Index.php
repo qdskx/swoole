@@ -2,18 +2,16 @@
 namespace app\controller;
 
 use app\BaseController;
-use rpc\contract\tp61\ArticleInterface;
-use rpc\contract\tp61\UserInterface;
 
 class Index extends BaseController
 {
-    public function index(ArticleInterface $article)
+
+    public function index(\rpc\contract\tp61\ArticleInterface $article, \rpc\contract\tp61\ProductInterface $product)
     {
-
-        $res = $article->add('关于病毒的文章');
-        var_dump($res);
-
-        return 'tp62index';
+        echo $article->create() . '<br>';
+        echo $article->delete(5) . '<br>';
+        echo $product->getDetail(10) . '<br>';
+        var_dump($product->getList());
     }
 
     public function hello($name = 'ThinkPHP6')
