@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket客户端</title>
+</head>
+<body>
+<h1>唉</h1>
+
+<script>
+    var ws = new WebSocket('ws://127.0.0.1:9504');
+
+    ws.onopen = function () {
+        console.log('onopen')
+    }
+
+    ws.onmessage = function (data) {
+        console.log('onmessage' + data.data)
+    }
+
+    ws.onclose = function () {
+        console.log('onclose')
+    }
+</script>
+
+</body>
+</html>

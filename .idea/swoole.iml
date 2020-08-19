@@ -30,5 +30,59 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/tp61/vendor/composer" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/league/flysystem-cached-adapter" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/nette/php-generator" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/nette/utils" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/open-smf/connection-pool" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/opis/closure" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/simple-cache" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/swoole/ide-helper" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/polyfill-php72" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/framework" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-helper" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-orm" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-swoole" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-template" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-trace" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-view" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/tp61/vendor/composer" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/league/flysystem" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/league/flysystem-cached-adapter" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/nette/php-generator" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/nette/utils" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/open-smf/connection-pool" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/opis/closure" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/psr/simple-cache" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/swoole/ide-helper" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/finder" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/polyfill-php72" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/symfony/var-dumper" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/framework" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-helper" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-orm" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-swoole" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-template" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-trace" />
+          <root url="file://$MODULE_DIR$/tp61/vendor/topthink/think-view" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

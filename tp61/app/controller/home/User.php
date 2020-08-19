@@ -20,4 +20,13 @@ class User
 
         return '注册成功<br />';
     }
+
+    public function one(){
+        $_SESSION['one'] = 'we';
+        var_dump($_SESSION);
+    }
+
+    public function two(){
+        var_dump($_SESSION);
+    }
 }

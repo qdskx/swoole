@@ -85,8 +85,8 @@ return [
         //自定义连接池
     ],
     'coroutine'  => [
-//        'enable' => true,
-        'enable' => false,
+        'enable' => true,
+//        'enable' => false,
         'flags'  => SWOOLE_HOOK_ALL,
     ],
     'tables'     => [

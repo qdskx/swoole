@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="192.168.1.184">
+  <component name="PublishConfigData" autoUpload="Always" serverName="192.168.1.185" promptOnLocalOverwrite="false" showNewOnSourceInSync="false" showNewOnTargetInSync="false">
     <serverData>
       <paths name="192.168.1.159">
         <serverdata>
@@ -9,7 +9,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="192.168.1.184">
+      <paths name="192.168.1.185">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
