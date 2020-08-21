@@ -7,7 +7,7 @@
  */
 $tcp_client = new swoole_client(SWOOLE_SOCK_TCP);
 
-if(!$tcp_client->connect('127.0.0.1' , 9501)){
+if(!$tcp_client->connect('127.0.0.1' , 8883)){
     exit('链接失败');
 }
 

@@ -21,7 +21,7 @@ $http->on('request' , function($request , $response){
     $response->write($val);   //使用 write 分段发送数据后，end 方法将不接受任何参数，调用 end 只是会发送一个长度为 0 的 Chunk 表示数据传输完毕 将不会再输出dddd
     $response->write('ffffffff');
 
-    $response->end('dddddddd'); //只能调用一次,需要毒刺向客户端发送消息,可使用write
+    $response->end('dddddddd'); //只能调用一次,需要多次向客户端发送消息,可使用write
 
     // 接入接下来继续处理mysql,那么http server onrequest的时间是redis和mysql的max值,而不是二者之和
 });
