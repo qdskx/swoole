@@ -11,8 +11,8 @@
 $http = new Swoole\Http\Server('0.0.0.0' , 9509);
 
 $http->set([
-//    'document_root' => "/swoole/live/data",   //不管用
-//    'enable_static_handler' => true,
+    'document_root' => "/swoole/live/data",
+    'enable_static_handler' => true,
 
 //    "static_handler_locations" => ['/swoole/live/data'],
 ]);
